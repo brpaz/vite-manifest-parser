@@ -2,9 +2,9 @@
 
 > Node module to parse [Vite](https://vitejs.dev/) manifest files.
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/brpaz/vite-manifest-parser/Ci?style=for-the-badge)](http://github.com/brpaz/vite-manifest-parser))
-![NPM](https://img.shields.io/npm/v/brpaz/vite-manifest-parser?style=flat-square)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/brpaz/vite-manifest-parser/Ci?style=for-the-badge)](https://github.com/brpaz/vite-manifest-parser/actions/workflows/ci.yml)
+![NPM](https://img.shields.io/npm/v/brpaz/vite-manifest-parser?style=for-the-badge)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=for-the-badge)](http://commitizen.github.io/cz-cli/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
 
@@ -29,7 +29,7 @@ const parser = new ManifestParser('<path to manifest>');
 const jsPath = parser.getScript('src/assets/main.js');
 ```
 
-## ## Contributing
+## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 

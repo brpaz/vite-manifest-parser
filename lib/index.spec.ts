@@ -11,10 +11,9 @@ describe('ViteParser', () => {
     expect(Object.keys(manifest)).toContain('src/assets/main.js');
   });
 
-  it('throws error on not existing manifest file', () => {
-    expect(() => {
-      const parser = new ManifestParser('xpto');
-    }).toThrow();
+  it('initializes empty manifest file on not existing manifest file', () => {
+    const parser = new ManifestParser('xpto');
+    expect(parser.getManifest()).toStrictEqual({});
   });
 
   it('returns scripts files', () => {

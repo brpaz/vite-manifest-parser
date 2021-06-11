@@ -11,13 +11,16 @@ interface Chunk {
 interface Manifest {
   [key: string]: Chunk;
 }
-
 export class ManifestParser {
-  manifest: Manifest;
+  manifest: Manifest = {};
 
   constructor(manifestPath: string) {
-    const rawData = fs.readFileSync(manifestPath);
-    this.manifest = JSON.parse(rawData.toString());
+    if (fs.existsSync(manifestPath)) {
+      const rawData = fs.readFileSync(manifestPath);
+      this.manifest = JSON.parse(rawData.toString());
+    } else {
+      console.warn(`Manifest file not found at path ${manifestPath}`);
+    }
   }
 
   /**
